@@ -2,11 +2,16 @@ name: Aktualizace Meteostanice
 on:
   schedule:
     - cron: '*/10 * * * *'
-  workflow_dispatch: # Umožní spustit skript i ručně tlačítkem
+  workflow_dispatch:
 
 jobs:
   run-meteo:
     runs-on: ubuntu-latest
+    env:
+      TUYA_API_KEY: ${{ secrets.TUYA_API_KEY }}
+      TUYA_API_SECRET: ${{ secrets.TUYA_API_SECRET }}
+      TUYA_DEVICE_ID: ${{ secrets.TUYA_DEVICE_ID }}
+      ZIVY_OBRAZ_KEY: ${{ secrets.ZIVY_OBRAZ_KEY }}
     steps:
       - name: Načtení kódu
         uses: actions/checkout@v4
