@@ -12,6 +12,8 @@ jobs:
       TUYA_API_SECRET: ${{ secrets.TUYA_API_SECRET }}
       TUYA_DEVICE_ID: ${{ secrets.TUYA_DEVICE_ID }}
       ZIVY_OBRAZ_KEY: ${{ secrets.ZIVY_OBRAZ_KEY }}
+      TMEP_DOMAIN_IN: ${{ secrets.TMEP_DOMAIN_IN }}
+      TMEP_DOMAIN_OUT: ${{ secrets.TMEP_DOMAIN_OUT }}
     steps:
       - name: Načtení kódu
         uses: actions/checkout@v4
@@ -23,7 +25,3 @@ jobs:
         run: pip install requests tinytuya
       - name: Spuštění skriptu
         run: python meteo.py
-
-#
-
-#
