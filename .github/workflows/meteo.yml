@@ -1,7 +1,7 @@
 name: Aktualizace Meteostanice
 on:
-  schedule:
-    - cron: '*/10 * * * *'
+  repository_dispatch:
+    types: [meteo_trigger]
   workflow_dispatch:
 
 jobs:
