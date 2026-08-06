@@ -85,3 +85,4 @@ try:
 
 except Exception as e:
     print("Neočekávaná chyba:", e)
+
