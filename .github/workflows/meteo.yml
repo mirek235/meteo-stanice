@@ -25,3 +25,4 @@ jobs:
         run: pip install requests tinytuya
       - name: Spuštění skriptu
         run: python meteo.py
+
